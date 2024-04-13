@@ -16,6 +16,24 @@
 
 .action__button {
     width: 50px;
-    height: 25px;
     font-size: 20px;
+    background: #ebf7ff;
+    border: 1px solid #ffffff;
+    color: #005bff;
+}
+
+.action__button:hover {
+    background: #d3e7ff;
+}
+
+.action__buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.counter {
+    margin: 0 20px;
 }

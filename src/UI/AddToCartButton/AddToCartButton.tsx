@@ -34,14 +34,12 @@ const AddToCartButton = ({ item }: Props) => {
                 removeItemFromCart(indexOfItemInCart);
                 setIndexOfItemInCart(-1);
             } else {
-                if (action === 1) {
-                    dispatch(
-                        changeCounter({
-                            action: action,
-                            index: indexOfItemInCart,
-                        })
-                    );
-                }
+                dispatch(
+                    changeCounter({
+                        action: action,
+                        index: indexOfItemInCart,
+                    })
+                );
             }
         } else {
             dispatch(
@@ -52,14 +50,16 @@ const AddToCartButton = ({ item }: Props) => {
 
     if (indexOfItemInCart !== -1) {
         return (
-            <div>
-                {userCart[indexOfItemInCart].counter}
+            <div className={styles.action__buttons}>
                 <button
                     className={styles.action__button}
                     onClick={(e) => changeCounterOfItem(e, -1)}
                 >
                     -
                 </button>
+                <div className={styles.counter}>
+                    {userCart[indexOfItemInCart].counter}
+                </div>
                 <button
                     className={styles.action__button}
                     onClick={(e) => changeCounterOfItem(e, 1)}

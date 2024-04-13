@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    max-width: 991px;
+    min-width: 300px;
+    width: 70vw;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.image {
+    min-width: 100px;
+    width: 20vw;
+    max-width: 350px;
+    margin: 20px;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 2em;
+}

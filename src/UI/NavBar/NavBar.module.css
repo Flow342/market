@@ -1,0 +1,36 @@
+.navbar {
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    background: #424b54;
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: end;
+    width: 70vw;
+}
+
+.link {
+    margin: 10px 5px 10px 20px;
+    transition-duration: 0.2s;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.link:hover {
+    color: #ffffff;
+}
+
+.navitem {
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+}
+
+.icon {
+    align-self: center;
+    margin: 0 3px;
+    color: white;
+}

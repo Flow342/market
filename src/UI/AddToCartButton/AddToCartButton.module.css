@@ -1,0 +1,21 @@
+.button {
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    background: #424b54;
+    color: #ffffff;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #4e5863;
+}
+
+.action__button {
+    width: 50px;
+    height: 25px;
+    font-size: 20px;
+}

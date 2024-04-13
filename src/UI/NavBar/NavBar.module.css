@@ -1,13 +1,26 @@
 .navbar {
+    display: flex;
+    justify-content: center;
+    background: #424b54;
+}
+
+.navbar__container {
     padding: 10px;
     margin-bottom: 5px;
     display: flex;
     justify-content: center;
     color: #ffffff;
     background: #424b54;
+    max-width: 65vw;
 }
 
-.breadcrumbs {
+.logo {
+    font-size: 50px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.links {
     display: flex;
     justify-content: end;
     width: 70vw;

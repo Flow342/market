@@ -9,5 +9,5 @@ interface Routes {
 
 export const routes: Routes[] = [
     { path: "/login", body: "Войти", icon: <PersonIcon /> },
-    { path: "/", body: "Корзина", icon: <ShoppingCartIcon /> },
+    { path: "/cart", body: "Корзина", icon: <ShoppingCartIcon /> },
 ];

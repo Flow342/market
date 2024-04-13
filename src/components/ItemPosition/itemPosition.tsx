@@ -2,7 +2,7 @@ import styles from "./ItemPosition.module.css";
 import { marketData } from "../../interfaces/interfaces";
 import { useNavigate } from "react-router-dom";
 import AddToCartButton from "../../UI/AddToCartButton/AddToCartButton";
-import StarIcon from "@mui/icons-material/Star";
+import Rating from "../../UI/Rating/Rating";
 
 interface ItemProps {
     item: marketData;
@@ -28,11 +28,7 @@ const ItemPosition = ({ item, index }: ItemProps) => {
                 <div className={styles.body__category}>{item.category}</div>
             </div>
             <div className={styles.rating}>
-                <StarIcon sx={{ height: 17, color: "#fcba03" }} />
-                <div className={styles.rating__rate}>{item.rating.rate}/</div>
-                <div className={styles.rating__count}>
-                    {item.rating.count} оценок
-                </div>
+                <Rating rating={item.rating.rate} count={item.rating.count} />
             </div>
             <div className={styles.button__container}>
                 <AddToCartButton item={item} />

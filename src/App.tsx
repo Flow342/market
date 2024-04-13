@@ -11,6 +11,7 @@ function App() {
                 <Route element={<StorePage />} path="/" />
                 <Route element={<ItemPage />} path="/catalog/:id" />
                 <Route element={<div>яфдгзф</div>} path="*" />
+                <Route element={<div>Корзина</div>} path="/cart" />
             </Routes>
         </BrowserRouter>
     );

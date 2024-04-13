@@ -20,6 +20,7 @@ const ItemPosition = ({ item, index }: ItemProps) => {
             <div className={styles.image__container}>
                 <img src={item.image} className={styles.image} />
             </div>
+            <div className={styles.price}>{Math.round(item.price * 93)} ₽</div>
             <div className={styles.body}>
                 <div className={styles.body__title}>
                     {item.title.slice(0, 20)}...

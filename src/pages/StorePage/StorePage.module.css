@@ -1,6 +1,5 @@
 .main {
     display: flex;
-    width: 100vw;
     justify-content: center;
 }
 
@@ -10,4 +9,9 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+}
+
+.loader {
+    height: 70vh;
+    align-content: center;
 }

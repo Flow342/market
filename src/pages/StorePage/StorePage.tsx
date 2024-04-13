@@ -25,7 +25,9 @@ const StorePage = () => {
             <div className={styles.container}>
                 {prodError && <div>Произошла ошибка {prodError}</div>}
                 {isProductsLoading ? (
-                    <MoonLoader color="#3663d6" size={60} />
+                    <div className={styles.loader}>
+                        <MoonLoader color="#3663d6" size={60} />
+                    </div>
                 ) : (
                     store?.map((item, index) => (
                         <ItemPosition key={index} item={item} index={index} />

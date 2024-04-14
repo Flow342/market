@@ -23,8 +23,6 @@ const ItemPage = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    console.log(store);
-
     return (
         <div className={styles.container}>
             <div className={styles.item}>

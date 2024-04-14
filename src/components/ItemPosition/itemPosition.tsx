@@ -23,7 +23,7 @@ const ItemPosition = ({ item, index }: ItemProps) => {
             <div className={styles.price}>{Math.round(item.price * 93)} ₽</div>
             <div className={styles.body}>
                 <div className={styles.body__title}>
-                    {item.title.slice(0, 20)}...
+                    {item.title.slice(0, 18)}...
                 </div>
                 <div className={styles.body__category}>{item.category}</div>
             </div>

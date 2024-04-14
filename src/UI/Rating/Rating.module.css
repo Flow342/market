@@ -1,9 +1,0 @@
-.rating {
-    display: flex;
-    vertical-align: middle;
-    margin: 10px 0;
-}
-
-.rating__count {
-    color: rgba(0, 0, 0, 0.4);
-}

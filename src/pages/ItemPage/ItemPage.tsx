@@ -6,7 +6,6 @@ import GetMarket from "../../api/GetMarket";
 import { useFetching } from "../../hooks/useFetching";
 import { MoonLoader } from "react-spinners";
 import AddToCartButton from "../../UI/AddToCartButton/AddToCartButton";
-import Rating from "../../UI/Rating/Rating";
 
 const ItemPage = () => {
     const [store, setStore] = useState<marketData>();
@@ -36,7 +35,7 @@ const ItemPage = () => {
                         <div className={styles.wrapper}>
                             <div className={styles.image__container}>
                                 <img
-                                    src={store.image}
+                                    src={store.images[0]}
                                     className={styles.image}
                                 />
                             </div>
@@ -45,14 +44,9 @@ const ItemPage = () => {
                                     {store.title}
                                 </div>
                                 <div className={styles.category}>
-                                    {store.category}
+                                    {store.category.name}
                                 </div>
-                                <div>
-                                    <Rating
-                                        rating={store.rating.rate}
-                                        count={store.rating.count}
-                                    />
-                                </div>
+
                                 <div className={styles.description}>
                                     {store.description}
                                 </div>

@@ -1,9 +1,15 @@
 export interface marketData {
-    category: string;
+    category: {
+        id: number;
+        creationAt: string;
+        updatedAt: string;
+        image: string;
+        name: string;
+    };
     description: string;
     id: number;
-    image: string;
+    images: string[];
     price: number;
-    rating: { count: number; rate: number };
     title: string;
+    updatedAt: string;
 }

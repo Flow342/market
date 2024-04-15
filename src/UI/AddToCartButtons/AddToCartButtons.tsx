@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./AddToCartButton.module.css";
+import styles from "./AddToCartButtons.module.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import {
     addItemToCart,
@@ -14,7 +14,7 @@ interface Props {
     item: marketData;
 }
 
-const AddToCartButton = ({ item }: Props) => {
+const AddToCartButtons = ({ item }: Props) => {
     const userCart = useSelector((state: RootState) => state.market);
     const [indexOfItemInCart, setIndexOfItemInCart] = useState(
         userCart.findIndex((element) => element.data.id === item.id)
@@ -77,4 +77,4 @@ const AddToCartButton = ({ item }: Props) => {
     );
 };
 
-export default AddToCartButton;
+export default AddToCartButtons;

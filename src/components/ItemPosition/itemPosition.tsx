@@ -1,7 +1,7 @@
 import styles from "./ItemPosition.module.css";
 import { marketData } from "../../interfaces/interfaces";
 import { useNavigate } from "react-router-dom";
-import AddToCartButton from "../../UI/AddToCartButton/AddToCartButton";
+import AddToCartButton from "../../UI/AddToCartButtons/AddToCartButtons";
 
 interface ItemProps {
     item: marketData;

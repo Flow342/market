@@ -5,7 +5,7 @@ import { marketData } from "../../interfaces/interfaces";
 import GetMarket from "../../api/GetMarket";
 import { useFetching } from "../../hooks/useFetching";
 import { MoonLoader } from "react-spinners";
-import AddToCartButton from "../../UI/AddToCartButton/AddToCartButton";
+import AddToCartButton from "../../UI/AddToCartButtons/AddToCartButtons";
 
 const ItemPage = () => {
     const [store, setStore] = useState<marketData>();

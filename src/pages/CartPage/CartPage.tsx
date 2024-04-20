@@ -21,11 +21,7 @@ const CartPage = () => {
             <div className={styles.page}>
                 <div className={styles.positions}>
                     {cart.map((item, index) => (
-                        <ItemPosition
-                            key={index}
-                            item={item.data}
-                            index={index}
-                        />
+                        <ItemPosition key={index} item={item.data} />
                     ))}
                 </div>
                 <div className={styles.order}>

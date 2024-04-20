@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./UI/NavBar/NavBar";
 import StorePage from "./pages/StorePage/StorePage";
 import ItemPage from "./pages/ItemPage/ItemPage";
+import CartPage from "./pages/CartPage/CartPage";
 
 function App() {
     return (
@@ -11,7 +12,7 @@ function App() {
                 <Route element={<StorePage />} path="/" />
                 <Route element={<ItemPage />} path="/catalog/:id" />
                 <Route element={<div>яфдгзф</div>} path="*" />
-                <Route element={<div>Корзина</div>} path="/cart" />
+                <Route element={<CartPage />} path="/cart" />
             </Routes>
         </BrowserRouter>
     );

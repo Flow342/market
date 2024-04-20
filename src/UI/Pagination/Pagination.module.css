@@ -1,0 +1,37 @@
+.item {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: 700;
+    background: #ffffff;
+    color: #424b54;
+    font-size: 20px;
+}
+
+.itemChoosen {
+    background-color: #424b54;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.container {
+    border: 1px solid rgba(0, 0, 0, 0.196);
+    max-width: 50vw;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.arrow {
+    padding: 10px;
+    cursor: pointer;
+    background: #93a8ac;
+    color: #ffffff;
+}
+
+.arrow_disabled {
+    color: #0000002d;
+    padding: 10px;
+}

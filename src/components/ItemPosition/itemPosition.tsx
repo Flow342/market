@@ -1,18 +1,17 @@
 import styles from "./ItemPosition.module.css";
 import { marketData } from "../../interfaces/interfaces";
 import { useNavigate } from "react-router-dom";
-import AddToCartButton from "../../UI/AddToCartButtons/AddToCartButtons";
+import AddToCartButtons from "../../UI/AddToCartButtons/AddToCartButtons";
 
 interface ItemProps {
     item: marketData;
-    index: number;
 }
 
-const ItemPosition = ({ item, index }: ItemProps) => {
+const ItemPosition = ({ item }: ItemProps) => {
     const router = useNavigate();
 
     const goToItem = () => {
-        router("/catalog/" + index);
+        router("/catalog/" + (item.id - 1));
     };
 
     return (
@@ -34,7 +33,7 @@ const ItemPosition = ({ item, index }: ItemProps) => {
                 </div>
 
                 <div className={styles.button__container}>
-                    <AddToCartButton item={item} />
+                    <AddToCartButtons item={item} />
                 </div>
             </div>
         )

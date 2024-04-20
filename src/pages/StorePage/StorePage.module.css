@@ -6,9 +6,13 @@
 .container {
     max-width: 80vw;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.store {
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .loader {
@@ -22,4 +26,10 @@
         flex-direction: column;
         flex-wrap: nowrap;
     }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }

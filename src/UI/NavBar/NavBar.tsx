@@ -1,8 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { routes } from "../../router/routes.tsx";
+import { FC } from "react";
 
-const NavBar = () => {
+const NavBar: FC = () => {
     const router = useNavigate();
 
     const goToMainPage = () => {

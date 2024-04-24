@@ -2,12 +2,13 @@ import styles from "./ItemPosition.module.css";
 import { marketData } from "../../interfaces/interfaces";
 import { useNavigate } from "react-router-dom";
 import AddToCartButtons from "../../UI/AddToCartButtons/AddToCartButtons";
+import { FC } from "react";
 
 interface ItemProps {
     item: marketData;
 }
 
-const ItemPosition = ({ item }: ItemProps) => {
+const ItemPosition: FC<ItemProps> = ({ item }) => {
     const router = useNavigate();
 
     const goToItem = () => {

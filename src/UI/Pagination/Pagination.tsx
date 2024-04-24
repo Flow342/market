@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { usePagination } from "../../hooks/UsePagination";
 import styles from "./Pagination.module.css";
 
@@ -7,28 +8,32 @@ interface PaginationProps {
     changePage: (p: number) => void;
 }
 
-const Pagination = ({ totalPages, page, changePage }: PaginationProps) => {
+const Pagination: FC<PaginationProps> = ({ totalPages, page, changePage }) => {
     const pagesArray = usePagination(totalPages);
     const onPage = (p: number) => {
         return p === page;
     };
+
     const prevPage = () => {
         if (page !== 1) {
             changePage(page - 1);
         }
     };
+
     const nextPage = () => {
         if (page !== pagesArray.length) {
             changePage(page + 1);
         }
     };
 
+    const prevPageStyle = page == 1 ? styles.arrow_disabled : styles.arrow;
+
+    const nextPageStyle =
+        page === pagesArray.length ? styles.arrow_disabled : styles.arrow;
+
     return (
         <div className={styles.container}>
-            <div
-                onClick={prevPage}
-                className={page == 1 ? styles.arrow_disabled : styles.arrow}
-            >
+            <div onClick={prevPage} className={prevPageStyle}>
                 &#9668;
             </div>
             {pagesArray.map((p) => (
@@ -40,14 +45,7 @@ const Pagination = ({ totalPages, page, changePage }: PaginationProps) => {
                     {p}
                 </span>
             ))}
-            <div
-                onClick={nextPage}
-                className={
-                    page === pagesArray.length
-                        ? styles.arrow_disabled
-                        : styles.arrow
-                }
-            >
+            <div onClick={nextPage} className={nextPageStyle}>
                 &#9658;
             </div>
         </div>

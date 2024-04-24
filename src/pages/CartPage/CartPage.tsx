@@ -2,9 +2,9 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import styles from "./CartPage.module.css";
 import ItemPosition from "../../components/ItemPosition/itemPosition";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
-const CartPage = () => {
+const CartPage: FC = () => {
     const cart = useSelector((state: RootState) => state.market);
     const [totalSum, setTotalSum] = useState<number>(0);
 

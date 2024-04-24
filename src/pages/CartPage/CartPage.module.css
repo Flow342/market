@@ -13,6 +13,7 @@
 .positions {
     display: flex;
     max-width: 50vw;
+    flex-wrap: wrap;
 }
 
 .total_sum {

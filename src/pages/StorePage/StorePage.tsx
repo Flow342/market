@@ -1,5 +1,5 @@
 import { marketData } from "../../interfaces/interfaces";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useFetching } from "../../hooks/useFetching";
 import GetMarket from "../../api/GetMarket";
 import ItemPosition from "../../components/ItemPosition/itemPosition";
@@ -7,7 +7,7 @@ import styles from "./StorePage.module.css";
 import { MoonLoader } from "react-spinners";
 import Pagination from "../../UI/Pagination/Pagination";
 
-const StorePage = () => {
+const StorePage: FC = () => {
     const [store, setStore] = useState<marketData[] | null>(null);
     const [page, setPage] = useState<number>(1);
     const [total, setTotal] = useState<number>(0);

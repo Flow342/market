@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import styles from "./AddToCartButtons.module.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import {
@@ -14,7 +14,7 @@ interface Props {
     item: marketData;
 }
 
-const AddToCartButtons = ({ item }: Props) => {
+const AddToCartButtons: FC<Props> = ({ item }) => {
     const userCart = useSelector((state: RootState) => state.market);
     const [indexOfItemInCart, setIndexOfItemInCart] = useState(
         userCart.findIndex((element) => element.data.id === item.id)
@@ -31,8 +31,7 @@ const AddToCartButtons = ({ item }: Props) => {
         e.stopPropagation();
         if (userCart[indexOfItemInCart].counter === 1) {
             if (action === -1) {
-                removeItemFromCart(indexOfItemInCart);
-                setIndexOfItemInCart(-1);
+                dispatch(removeItemFromCart(indexOfItemInCart));
             } else {
                 dispatch(
                     changeCounter({
@@ -46,6 +45,7 @@ const AddToCartButtons = ({ item }: Props) => {
                 changeCounter({ action: action, index: indexOfItemInCart })
             );
         }
+        console.log(userCart);
     };
 
     if (indexOfItemInCart !== -1) {

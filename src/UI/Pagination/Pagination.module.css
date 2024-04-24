@@ -9,10 +9,10 @@
 
 .itemChoosen {
     background-color: #424b54;
+    padding: 5px 10px;
     color: #ffffff;
     font-weight: 700;
     font-size: 20px;
-    padding: 5px 10px;
     border-radius: 5px;
 }
 

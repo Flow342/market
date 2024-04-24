@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import styles from "./ItemPage.module.css";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { marketData } from "../../interfaces/interfaces";
 import GetMarket from "../../api/GetMarket";
 import { useFetching } from "../../hooks/useFetching";
 import { MoonLoader } from "react-spinners";
 import AddToCartButton from "../../UI/AddToCartButtons/AddToCartButtons";
 
-const ItemPage = () => {
+const ItemPage: FC = () => {
     const [store, setStore] = useState<marketData>();
     const params = Number(useParams().id);
     const [fetchProducts, isProductsLoading, prodError] = useFetching(

@@ -24,7 +24,7 @@ const userCartSlice = createSlice({
             state[action.payload.index].counter += action.payload.action;
         },
         removeItemFromCart: (state, action: PayloadAction<number>) => {
-            state.slice(action.payload);
+            state.splice(action.payload, 1);
         },
     },
 });

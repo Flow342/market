@@ -25,7 +25,7 @@ const CartPage: FC = () => {
                     ))}
                 </div>
                 <div className={styles.order}>
-                    Заказать
+                    <button className={styles.order_button}>Заказать!</button>
                     <div className={styles.total_sum}>{totalSum} ₽</div>
                 </div>
             </div>

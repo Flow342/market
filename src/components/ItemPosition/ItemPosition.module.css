@@ -1,5 +1,7 @@
 .container {
-    margin: 20px 0 1% 20px;
+    margin: 1vw;
+    min-width: 150px;
+    max-width: 10vw;
     border-radius: 25px;
     cursor: pointer;
     border-radius: 15px;

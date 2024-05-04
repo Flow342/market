@@ -2,9 +2,9 @@
     border: none;
     width: 100%;
     border-radius: 15px;
+    background: #424b54;
     padding: 10px;
     display: flex;
-    background: #424b54;
     color: #ffffff;
     justify-content: center;
     cursor: pointer;

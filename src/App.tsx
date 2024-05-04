@@ -10,6 +10,7 @@ function App() {
             <NavBar />
             <Routes>
                 <Route element={<StorePage />} path="/" />
+                <Route element={<StorePage />} path="/category/:id" />
                 <Route element={<ItemPage />} path="/catalog/:id" />
                 <Route element={<div>яфдгзф</div>} path="*" />
                 <Route element={<CartPage />} path="/cart" />

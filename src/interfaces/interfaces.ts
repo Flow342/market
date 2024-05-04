@@ -13,3 +13,11 @@ export interface marketData {
     title: string;
     updatedAt: string;
 }
+
+export interface categoriesData {
+    id: number;
+    name: string;
+    image: string;
+    creationAt: string;
+    updatedAt: string;
+}

@@ -6,15 +6,22 @@ import ItemPosition from "../../components/ItemPosition/itemPosition";
 import styles from "./StorePage.module.css";
 import { MoonLoader } from "react-spinners";
 import Pagination from "../../UI/Pagination/Pagination";
+import { useParams } from "react-router-dom";
 
 const StorePage: FC = () => {
-    const [store, setStore] = useState<marketData[] | null>(null);
+    const params = useParams().id;
+    const [store, setStore] = useState<marketData[]>([]);
     const [page, setPage] = useState<number>(1);
     const [total, setTotal] = useState<number>(0);
     const [fetchProducts, isProductsLoading, prodError] = useFetching(
         async () => {
-            const response = await GetMarket.getProductsPage(page);
-            setStore(response);
+            if (!params) {
+                const response = await GetMarket.getProductsPage(page);
+                setStore(response);
+            } else {
+                const response = await GetMarket.getSingleCategory(params);
+                setStore(response);
+            }
         }
     );
 
@@ -26,7 +33,7 @@ const StorePage: FC = () => {
         fetchTotalItems();
         fetchProducts();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [page]);
+    }, [page, params]);
 
     const changePage = (page: number) => {
         setPage(page);
@@ -42,7 +49,7 @@ const StorePage: FC = () => {
                 ) : (
                     <>
                         <div className={styles.store}>
-                            {store?.map((item, index) => (
+                            {store.map((item, index) => (
                                 <ItemPosition key={index} item={item} />
                             ))}
                         </div>

@@ -23,4 +23,15 @@ export default class GetMarket {
         const data = await GetMarket.getProducts();
         return data.length;
     }
+    static async getAllCategories() {
+        const data = await axios("https://api.escuelajs.co/api/v1/categories");
+
+        return data.data;
+    }
+    static async getSingleCategory(id: string) {
+        const data = await axios(
+            `https://api.escuelajs.co/api/v1/products/?categoryId=${id}`
+        );
+        return data.data;
+    }
 }

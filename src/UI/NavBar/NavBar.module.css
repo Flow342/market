@@ -47,3 +47,9 @@
     margin: 0 3px;
     color: white;
 }
+
+.categories_icon {
+    align-self: center;
+    margin-left: 30px;
+    cursor: pointer;
+}

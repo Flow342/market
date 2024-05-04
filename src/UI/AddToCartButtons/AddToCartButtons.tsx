@@ -45,7 +45,6 @@ const AddToCartButtons: FC<Props> = ({ item }) => {
                 changeCounter({ action: action, index: indexOfItemInCart })
             );
         }
-        console.log(userCart);
     };
 
     if (indexOfItemInCart !== -1) {

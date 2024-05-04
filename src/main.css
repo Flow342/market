@@ -9,3 +9,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+body {
+    background-color: #f6f6f9;
+}

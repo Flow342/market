@@ -7,19 +7,19 @@ import { FC, useEffect, useState } from "react";
 const CartPage: FC = () => {
     const cart = useSelector((state: RootState) => state.market);
     const [totalSum, setTotalSum] = useState<number>(0);
-    const [itemsLength, setItemsLength] = useState<number>(0);
+    // const [itemsLength, setItemsLength] = useState<number>(0);
     console.log(cart.length);
 
     useEffect(() => {
-        const itemsLength = cart.reduce(
-            (total, item) => total + item.counter,
-            0
-        );
+        // const itemsLength = cart.reduce(
+        //     (total, item) => total + item.counter,
+        //     0
+        // );
         const total = cart.reduce(
             (total, item) => total + item.counter * (item.data.price * 93),
             0
         );
-        setItemsLength(itemsLength);
+        // setItemsLength(itemsLength);
         setTotalSum(total);
     }, [cart]);
 
@@ -39,9 +39,9 @@ const CartPage: FC = () => {
                             Заказать!
                             <div className={styles.total_sum}>{totalSum} ₽</div>
                         </button>
-                        <div className={styles.total_items}>
+                        {/* <div className={styles.total_items}>
                             Товары, {itemsLength} шт
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             )}

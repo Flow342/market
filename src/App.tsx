@@ -3,6 +3,7 @@ import NavBar from "./UI/NavBar/NavBar";
 import StorePage from "./pages/StorePage/StorePage";
 import ItemPage from "./pages/ItemPage/ItemPage";
 import CartPage from "./pages/CartPage/CartPage";
+import AuthPage from "./pages/AuthPage/AuthPage";
 
 function App() {
     return (
@@ -12,7 +13,7 @@ function App() {
                 <Route element={<StorePage />} path="/" />
                 <Route element={<StorePage />} path="/category/:id" />
                 <Route element={<ItemPage />} path="/catalog/:id" />
-                <Route element={<div>яфдгзф</div>} path="*" />
+                <Route element={<AuthPage />} path="/auth" />
                 <Route element={<CartPage />} path="/cart" />
             </Routes>
         </BrowserRouter>
